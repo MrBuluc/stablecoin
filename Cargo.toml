@@ -12,3 +12,19 @@ codegen-units = 1
 opt-level = 3
 incremental = false
 codegen-units = 1
+
+[workspace.dependencies]
+solana-program = "=1.18.17"
+anchor-lang = "=0.30.1"
+anchor-spl = "=0.30.1"
+solana-sdk = "=1.18.17"
+constant_time_eq = "=0.3.1"
+proc-macro2 = "=1.0.94"
+borsh = "=0.10.3"
+blake3 = "=1.5.0"
+solana-zk-token-sdk = "=1.18.17"
+
+[patch.crates-io]
+proc-macro2 = { path = "patches/proc-macro2" }
+borsh = { path = "patches/borsh" }
+jobserver = { git = "https://github.com/rust-lang/jobserver-rs", rev = "0.1.32" }
